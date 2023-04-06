@@ -23,7 +23,7 @@
     "author": "Safe (https://safe.global)",
     "license": "MIT",
     "dependencies": {
-        "@safe-global/safe-gateway-typescript-sdk": "^3.5.3",
+        "@neonlabs-devops/gnosis-neon-gateway-typescript-sdk": "^3.7.4",
         "ethers": "^5.7.2"
     },
     "devDependencies": {
