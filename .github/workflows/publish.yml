@@ -1,0 +1,30 @@
+name: Publish Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: cd packages/safe-apps-sdk; yarn install --frozen-lockfile
+
+      - name: Build
+        run: cd packages/safe-apps-sdk; yarn build
+      
+      - name: Login to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMJS_TOKEN}}
+        run: echo "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}" >> ~/.npmrc
+
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMJS_TOKEN}}
+        run: cd packages/safe-apps-sdk; npm publish
