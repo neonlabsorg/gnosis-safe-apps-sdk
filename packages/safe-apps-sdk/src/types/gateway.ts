@@ -1,4 +1,8 @@
-import { SafeBalanceResponse, TransactionDetails, TokenInfo } from '@neonlabs-devops/gnosis-neon-gateway-typescript-sdk';
+import {
+  SafeBalanceResponse,
+  TransactionDetails,
+  TokenInfo,
+} from '@neonlabs-devops/gnosis-neon-gateway-typescript-sdk';
 
 export {
   AddOwner,
