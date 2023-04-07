@@ -1,7 +1,7 @@
-import { ChainInfo as _ChainInfo } from '@safe-global/safe-gateway-typescript-sdk';
+import { ChainInfo as _ChainInfo } from '@neonlabs-devops/gnosis-neon-gateway-typescript-sdk';
 import { BigNumberish, BytesLike } from 'ethers';
 export type ChainInfo = Pick<_ChainInfo, 'chainName' | 'chainId' | 'shortName' | 'nativeCurrency' | 'blockExplorerUriTemplate'>;
-export { NativeCurrency } from '@safe-global/safe-gateway-typescript-sdk';
+export { NativeCurrency } from '@neonlabs-devops/gnosis-neon-gateway-typescript-sdk';
 export type BaseTransaction = {
     to: string;
     value: string;
